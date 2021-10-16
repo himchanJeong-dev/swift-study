@@ -52,9 +52,9 @@ numbers
 
 // Dictionary 키와 값, 초기값 설정 가능 //
 var dic: [String: Int] = [:]
-dic["김연주"] = 28
+dic["김영희"] = 28
 dic["김철수"] = 50
-dic["정힘찬"] = 29
+dic["힘힘이"] = 29
 dic
 print(dic)
 dic.removeValue(forKey: "김철수")
