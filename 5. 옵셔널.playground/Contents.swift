@@ -81,9 +81,9 @@ print(stringToInt + 1)
 묵시적 해제를 선언하기 위해서는 선언부에 물음표 대신 느낌표 사용 */
 
 let x1: Int! = 1
-let y1: Int = x1!  // y1의 타입이 Int이므로 옵셔널로 사용되지 않으면 자동으로 unwrapping
+let y1: Int = x1  // y1의 타입이 Int이므로 옵셔널로 사용되지 않으면 자동으로 unwrapping
 let z1 = x1  // z1의 자료형이 결정되어있지 않으므로 z1은 옵셔널형
-let a1: Int = x1!
+let a1 = x1!  // 강제언래핑해서 옵셔널형이 아닌 1
 let b1 = x1 + 1 //  더하기를 하기 위해 자동으로 옵셔널을 풀어버림
 print(x1, y1, z1, a1, b1)  // Optional(1) 1 Optional(1) 1 2
 print(type(of: x1), type(of: y1), type(of: z1), type(of: a1), type(of: b1))
