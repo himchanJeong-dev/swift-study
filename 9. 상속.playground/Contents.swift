@@ -47,3 +47,23 @@ class Student1: Man {  //Man의 모든 것을 가지고 있음
 }
 var park: Student1 = Student1(age1: 19, weight1: 40.2, name: "김사랑")
 park.display()
+
+
+//extension : 클래스, 구조체, 열거형, 프로토콜에 새로운 기능을 추가
+//하위 클래스를 생성하거나 참조하지 않고 기존 클래스에 메서드, 생성자, 계산프로퍼티 등의 기능을 추가
+extension Double {
+    var squared: Double {  //새로운 프로퍼티를 추가한다
+        return self * self
+    }
+}
+
+let myValue: Double = 3.0
+print(myValue.squared)  //9.0
+
+
+//access modifier : 접근제어
+//open, pubilc, internal, fileprivate, private 순서로 접근수준이 낮아진다. (기본은 internal)
+//open, public : 모듈의 모든 소스파일 내에 사용가능, 다른 소스파일 사용가능(open 접근은 클래스,클래스멤버에 사용)
+//internal : 해당 모듈의 모든 소스파일 내에서 사용가능, 외부는 X(일반적인 내부구조를 정의할때 사용)
+//fileprivate : 해당 소스 파일 내에서만 사용가능
+//private : 블록 내에서만 사용 {}
