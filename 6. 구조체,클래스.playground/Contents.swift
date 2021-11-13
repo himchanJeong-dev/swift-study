@@ -94,11 +94,19 @@ class Man {
         age = yourAge
         weight = yourWeight
     }
+    deinit {
+        print("deinit Man")
+    }
 }
 var kim = Man(yourAge: 10, yourWeight: 10.5)  // var kim = Man()오류
 kim.display()  // 나이=10, 몸무게=10.5
 // self : 현재 클래스 내 메서드나 프로퍼티를 가리킬 때 메서드, 프로퍼티 앞에 self.를 붙인다
 // age = age인 경우엔 self.age = age로 써야한다, 일반적으로는 위에처럼 바꾸는것보단 같은 변수이름 self를 쓴다!
+
+//deinit : class 인스턴스에만 구현 가능, 인스턴스가 닐값인 경우 deinit 출력
+var kim1: Man? = Man(yourAge: 10, yourWeight: 40)
+kim1 = nil  //deinit Man 출력
+
 
 
 //computed property
